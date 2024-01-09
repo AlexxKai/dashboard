@@ -1,0 +1,60 @@
+ /* Estilos para expandir el contenido al tamaño total */
+ html,
+ body {
+     height: 100%;
+ }
+
+ /* Estilos para la barra lateral */
+ .sidebar {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     width: 75px;
+     z-index: 100;
+     padding: 48px 0;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Estilos para el contenido principal */
+ .main-content {
+     margin-left: 80px;
+     margin-right: 5px;
+     /* Ancho de la barra lateral */
+     padding: 20px;
+ }
+
+ /*Imagen de perfil*/
+ .profile-image {
+     position: absolute;
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     overflow: hidden;
+     border: 2px solid #fff;
+ }
+
+ .profile-image img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /*Iconos encima de la imagen de perfil*/
+ .profile-icons {
+     position: absolute;
+     bottom: 80px;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 1;
+     color: #5250e4;
+ }
+
+ .profile-icons i {
+     display: block;
+     margin-bottom: 8px;
+     /* Espaciado entre los iconos */
+ }
