@@ -1,0 +1,38 @@
+Para obtener las credenciales correspondientes para tus aplicaciones OAuth en diferentes plataformas, debes seguir los siguientes pasos para cada plataforma específica. Aquí te doy una breve guía para algunas plataformas comunes:
+
+### Google:
+
+1. Visita el [Google Cloud Console](https://console.cloud.google.com/).
+2. Crea un nuevo proyecto o selecciona uno existente.
+3. En el menú lateral, selecciona "API y servicios" > "Credenciales".
+4. Haz clic en "Crear credenciales" y selecciona "ID de cliente de OAuth".
+5. Selecciona el tipo de aplicación que estás construyendo.
+6. Completa la información solicitada y proporciona las URI de redireccionamiento autorizadas.
+7. Una vez creadas las credenciales, encontrarás el ID de cliente y el secreto de cliente.
+
+### Facebook:
+
+1. Ve a [Facebook Developers](https://developers.facebook.com/).
+2. Crea una nueva aplicación.
+3. Configura la aplicación proporcionando la información necesaria.
+4. En la sección "Configuración" > "Básico", encontrarás la ID de la aplicación y la clave secreta de la aplicación.
+
+### GitHub:
+
+1. Accede a tu cuenta de GitHub y ve a [Settings](https://github.com/settings).
+2. En el menú lateral, selecciona "Developer settings".
+3. Haz clic en "OAuth Apps" y luego en "New OAuth App".
+4. Proporciona los detalles requeridos, como la URL de autorización y la URL de redireccionamiento.
+5. Una vez creada la aplicación, encontrarás el ID del cliente y el secreto del cliente en la página de configuración de la aplicación.
+
+### Apple:
+
+1. Ve a [Apple Developer](https://developer.apple.com/).
+2. Inicia sesión con tu cuenta de Apple.
+3. En el menú lateral, selecciona "Identificadores de aplicaciones".
+4. Crea un nuevo identificador de aplicación y configúralo para iniciar sesión con Apple.
+5. En la sección "Credenciales de servicio", crea un nuevo ID de cliente.
+6. Completa la información necesaria y guarda la configuración.
+7. En la sección "Credenciales de servicio", encontrarás el ID de cliente y el secreto de cliente.
+
+Recuerda siempre proteger tus credenciales y no compartirlas públicamente. Utiliza entornos seguros y nunca incluyas tus credenciales directamente en el código fuente del cliente. Además, ten en cuenta las políticas de cada plataforma respecto al uso de sus servicios de autenticación.
