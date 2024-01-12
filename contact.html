@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón con Menú Desplegable</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        /* Estilo opcional para el menú desplegable */
+        #menu {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botón que activará el menú desplegable -->
+<button onclick="toggleMenu()">
+    <img src="./img/yo.png" alt="profile photo" style="width: 20px; height: 20px; border-radius: 50%; margin-right: 5px;">
+</button>
+
+<!-- Menú desplegable oculto por defecto -->
+<div id="menu">
+    <a href="#">Opción 1</a>
+    <a href="#">Opción 2</a>
+    <a href="#">Opción 3</a>
+</div>
+
+<script src="./js/button.js"></script>
+
+</body>
+</html>
