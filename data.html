@@ -24,20 +24,25 @@
     <nav>
       <div id="sidebar">
         <img src="./img/logo/10.png" alt="Logo">
+        <a href="#" id="searchLink"><i class="fi fi-rr-search"> </i>Search</a>
         <a href="./index.html"><i class="fi fi-rr-home"> </i>Home</a>
-        <a href="#"><i class="fi fi-rr-search"> </i>Search</a>
         <a href="./data.html"><i class="fi fi-br-chart-simple"> </i>Data</a>
         <a href="./contact.html"><i class="fi fi-rr-envelope"> </i>Contact</a>
       </div>
+      <div class="dropdown">
+        <button id="dropdownBtn">
+          <img src="./img/yo.png" alt="Icono">
+        </button>
 
-      <button id="menuBtn">
-        <img src="./img/yo.png" alt="Icono">
-      </button>
-
-      <div id="dropdown">
-        <a href="./login.html">Login/Register</a>
-        <a href="#">Profile</a>
-        <a href="#">Settings</a>
+        <div class="dropdown-content">
+          <a href="./login.html">Login/Register</a>
+          <a href="./profile.html">Profile</a>
+          <a href="#">Settings</a>
+        </div>
+      </div>
+      <div id="searchBarContainer" class="hidden">
+        <input type="text" id="searchInput" placeholder="Type your search...">
+        <button id="searchButton"><a id="search" href="./treasure.html"> Search</button></a>
       </div>
     </nav>
   </header>
@@ -45,32 +50,6 @@
   <!-- MAIN -->
   <main>
     <div id="chart_div"></div>
-
-    <!-- <div class="card text-center">
-          <div class="card-header">
-            <ul class="nav nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div> -->
-
-
   </main>
 
   <!--JavaScript at end of body for optimized loading-->
@@ -81,12 +60,10 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="./js/graphic.js"></script>
 
-  <script>
-    document.getElementById('menuBtn').addEventListener('click', function () {
-      var dropdown = document.getElementById('dropdown');
-      dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
-    });
-  </script>
+  <!-- button profile -->
+  <script src="./js/button.js"></script>
+  <!-- search bar -->
+  <script src="./js/search.js"></script>
 
 </body>
 

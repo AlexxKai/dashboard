@@ -22,25 +22,31 @@
     <!-- NAVBAR -->
     <header>
         <nav>
-            <div id="sidebar">
-                <img src="./img/logo/10.png" alt="Logo">
-                <a href="./index.html"><i class="fi fi-rr-home"> </i>Home</a>
-                <a href="#"><i class="fi fi-rr-search"> </i>Search</a>
-                <a href="./data.html"><i class="fi fi-br-chart-simple"> </i>Data</a>
-                <a href="./contact.html"><i class="fi fi-rr-envelope"> </i>Contact</a>
-            </div>
-
-            <button id="menuBtn">
-                <img src="./img/yo.png" alt="Icono">
+          <div id="sidebar">
+            <img src="./img/logo/10.png" alt="Logo">
+            <a href="#" id="searchLink"><i class="fi fi-rr-search"> </i>Search</a>
+            <a href="./index.html"><i class="fi fi-rr-home"> </i>Home</a>
+            <a href="./data.html"><i class="fi fi-br-chart-simple"> </i>Data</a>
+            <a href="./contact.html"><i class="fi fi-rr-envelope"> </i>Contact</a>
+          </div>
+          <div class="dropdown">
+            <button id="dropdownBtn">
+              <img src="./img/yo.png" alt="Icono">
             </button>
-
-            <div id="dropdown">
-                <a href="./login.html">Login/Register</a>
-                <a href="#">Profile</a>
-                <a href="#">Settings</a>
+    
+            <div class="dropdown-content">
+              <a href="./login.html">Login/Register</a>
+              <a href="./profile.html">Profile</a>
+              <a href="#">Settings</a>
             </div>
+          </div>
+          <div id="searchBarContainer" class="hidden">
+            <input type="text" id="searchInput" placeholder="Type your search...">
+            <button id="searchButton"><a id="search" href="./treasure.html"> Search</button></a>
+          </div>
         </nav>
-    </header>
+      </header>
+    
 
     <!-- MAIN -->
     <main>
@@ -114,13 +120,10 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- button -->
-    <script>
-        document.getElementById('menuBtn').addEventListener('click', function () {
-            var dropdown = document.getElementById('dropdown');
-            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
-        });
-    </script>
+    <!-- button profile -->
+    <script src="./js/button.js"></script>
+      <!-- search bar -->
+  <script src="./js/search.js"></script>
 </body>
 
 </html>

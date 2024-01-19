@@ -1,91 +1,152 @@
  /* Estilos para expandir el contenido al tamaño total */
- html{
+ html {
      height: 100%;
  }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+ }
 
-main {
-    margin-left: 150px;
-    /* Ancho de la barra lateral */
-    padding: 20px;
-}
+ main {
+     margin-left: 150px;
+     /* Ancho de la barra lateral */
+     padding: 20px;
+ }
 
-#sidebar {
-    height: 100vh;
-    width: 150px;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    font-size: x-small;
-}
+ /* Barra de navegacion */
+ #sidebar {
+     height: 100vh;
+     width: 150px;
+     background-color: #333;
+     color: #fff;
+     position: fixed;
+     left: 0;
+     top: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-top: 20px;
+     font-size: x-small;
+ }
 
-#sidebar a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    margin: 5px 0;
-    border-bottom: 1px solid #a364f7;
-    width: 100%;
-    text-align: center;
-}
+ #sidebar a {
+     text-decoration: none;
+     color: #fff;
+     padding: 10px;
+     margin: 5px 0;
+     border-bottom: 1px solid #a364f7;
+     width: 100%;
+     text-align: center;
+ }
 
-#sidebar a:hover {
-    background-color: #555;
-    border-radius: 20px;
-    width: 45%;
-}
+ #sidebar a:hover {
+     background-color: #555;
+     border-radius: 20px;
+     width: 45%;
+ }
 
-#sidebar img {
-    width: 55%;
-    max-width: 100px;
-    border-radius: 50%;
-}
+ #sidebar img {
+     width: 55%;
+     max-width: 100px;
+     border-radius: 50%;
+ }
 
-#menuBtn {
-    position: fixed;
-    left: 0;
-    bottom: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    left: 30px;
-}
+ /* Search bar */
+ #searchBarContainer {
+     display: block;
+     position: absolute;
+     top: 95px;
+     z-index: 1;
+     /*Inicialmente fuera de pantalla */
+     left: -100%;
+     /*Transición */
+     transition: left 0.3s ease-in-out;
+ }
 
-#menuBtn img {
-    width: 60px;
-    border-radius: 100%;
-}
+ #searchBarContainer input {
+     border-radius: 20px;
+     border-bottom: 1px solid #a364f7;
+     box-shadow: 0 0 50px rgb(184, 107, 255);
+     background-color: #e41414;
+     color: #fff;
+ }
 
-#dropdown {
-    display: none;
-    position: fixed;
-    left: 12px;
-    bottom: 100px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    border: 1px solid #a364f7;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgb(184, 107, 255);
-}
+ #searchBarContainer button {
+     border-radius: 20px;
+     border-bottom: 1px solid #a364f7;
+     box-shadow: 0 0 50px rgb(184, 107, 255);
+     background-color: #e41414;
+     color: #fff;
+ }
 
-#dropdown a {
-    display: block;
-    text-decoration: none;
-    color: #fff;
-    padding: 8px 0;
-    text-align: center;
-}
+ #search {
+     color: #fff;
+     text-decoration: none;
+ }
+
+ #searchBarContainer.active {
+     left: 110px;
+     /*Cambia posición cuando se activa */
+ }
+
+ #searchBarContainer.active button {
+     left: 110px;
+     /*Cambia posición cuando se activa */
+ }
+
+ #searchBarContainer.active input {
+     border-radius: 20px;
+     border-bottom: 1px solid #a364f7;
+     box-shadow: 0 0 20px rgb(184, 107, 255);
+     background-color: #333;
+     color: #fff;
+ }
+
+ #searchBarContainer.active button {
+     border-radius: 20px;
+     border-bottom: 1px solid #a364f7;
+     box-shadow: 0 0 20px rgb(184, 107, 255);
+     background-color: #333;
+     color: #fff;
+ }
+
+ /* Botón perfil */
+ #dropdownBtn {
+     position: fixed;
+     left: 0;
+     bottom: 20px;
+     background-color: #333;
+     color: #fff;
+     border: none;
+     padding: 10px;
+     border-radius: 50%;
+     cursor: pointer;
+     left: 30px;
+ }
+
+ #dropdownBtn img {
+     width: 60px;
+     border-radius: 100%;
+ }
+
+ .dropdown-content {
+     display: none;
+     position: fixed;
+     left: 12px;
+     bottom: 100px;
+     background-color: #333;
+     color: #fff;
+     padding: 10px;
+     border: 1px solid #a364f7;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgb(184, 107, 255);
+ }
+
+ .dropdown-content a {
+     display: block;
+     text-decoration: none;
+     color: #fff;
+     padding: 8px 0;
+     text-align: center;
+ }
