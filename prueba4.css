@@ -54,6 +54,7 @@ a:hover {
     height: 60px;
     border-radius: 100%;
   }
+
 .dropdown-content {
   display: none;
   position: absolute;

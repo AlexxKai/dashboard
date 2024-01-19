@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="prueba4.css">
-  <script src="prueba4.js" defer></script>
-  <title>Barra de Navegación</title>
+  <!-- <link rel="stylesheet" href="prueba4.css">
+  <script src="prueba4.js" defer></script> -->
+  <title>Prueba 4</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 100px;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: #333;
+      padding-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+/* *************************************** */
+
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    #dropdownBtn {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 100%;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #dropdownBtn img {
+      width: 60px;
+      /* Puedes ajustar el tamaño según tus preferencias */
+      height: 60px;
+      border-radius: 100%;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      margin-left: 260px;
+      padding: 20px;
+    }
+
+    /* #dropdownBtn:hover + .dropdown-content {
+  display: block;
+} */
+  </style>
 </head>
+
 <body>
 
   <div class="sidebar">
@@ -35,5 +129,40 @@
     <p>Este es el contenido principal de la página.</p>
   </div>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var dropdownBtn = document.getElementById('dropdownBtn');
+      var dropdownContent = document.querySelector('.dropdown-content');
+
+      // Función para mostrar u ocultar el menú desplegable
+      function toggleDropdown() {
+        if (dropdownContent.style.display === 'block') {
+          dropdownContent.style.display = 'none';
+        } else {
+          dropdownContent.style.display = 'block';
+        }
+      }
+
+      // Evento de clic en el botón
+      dropdownBtn.addEventListener('click', function () {
+        toggleDropdown();
+      });
+
+      // Evento de clic en la imagen dentro del botón
+      dropdownBtn.querySelector('img').addEventListener('click', function (event) {
+        // Evitar que el clic en la imagen propague al contenedor del botón
+        event.stopPropagation();
+        toggleDropdown();
+      });
+
+      // Cerrar el menú desplegable si se hace clic fuera de él
+      window.addEventListener('click', function (event) {
+        if (!event.target.matches('#dropdownBtn') && dropdownContent.style.display === 'block') {
+          dropdownContent.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

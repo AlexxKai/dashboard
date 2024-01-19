@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,6 +54,13 @@
       cursor: pointer;
     }
 
+    #menuBtn img {
+    width: 60px; /* Puedes ajustar el tamaño según tus preferencias */
+    height: 60px;
+    border-radius: 100%;
+    margin-left: 70px;
+  }
+
     #dropdown {
       display: none;
       position: fixed;
@@ -74,31 +82,35 @@
     }
   </style>
 </head>
+
 <body>
 
-<div id="sidebar">
-  <img src="./img/logo/10.png" alt="Logo">
-  <a href="#">Inicio</a>
-  <a href="#">Página 1</a>
-  <a href="#">Página 2</a>
-  <a href="#">Página 3</a>
-  <a href="#">Página 4</a>
-</div>
+  <div id="sidebar">
+    <img src="./img/logo/10.png" alt="Logo">
+    <a href="#">Inicio</a>
+    <a href="#">Página 1</a>
+    <a href="#">Página 2</a>
+    <a href="#">Página 3</a>
+    <a href="#">Página 4</a>
+  </div>
 
-<button id="menuBtn">&#9776;</button>
+  <button id="menuBtn">
+    <img src="./img/yo.png" alt="Icono">
+  </button>
 
-<div id="dropdown">
-  <a href="#">Opción 1</a>
-  <a href="#">Opción 2</a>
-  <a href="#">Opción 3</a>
-</div>
+  <div id="dropdown">
+    <a href="#">Opción 1</a>
+    <a href="#">Opción 2</a>
+    <a href="#">Opción 3</a>
+  </div>
 
-<script>
-  document.getElementById('menuBtn').addEventListener('click', function() {
-    var dropdown = document.getElementById('dropdown');
-    dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
-  });
-</script>
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', function () {
+      var dropdown = document.getElementById('dropdown');
+      dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+    });
+  </script>
 
 </body>
+
 </html>

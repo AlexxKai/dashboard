@@ -36,3 +36,8 @@ Para obtener las credenciales correspondientes para tus aplicaciones OAuth en di
 7. En la sección "Credenciales de servicio", encontrarás el ID de cliente y el secreto de cliente.
 
 Recuerda siempre proteger tus credenciales y no compartirlas públicamente. Utiliza entornos seguros y nunca incluyas tus credenciales directamente en el código fuente del cliente. Además, ten en cuenta las políticas de cada plataforma respecto al uso de sus servicios de autenticación.
+****************
+Utilizando html, css y javascript quiero que me indiques el codigo para generar una barra de navegacion.
+La barra de navegacion estara vertical en el  lateral izquierdo, estara siempre fija, es decir, aunque naveguemos por la pagina y bajemos para ver el resto del contenido, se seguira viendo la barra de navegacion completa. Tendra 5 referencias que llevaran al resto de paginas
+En la parte inferior de la barra de navegacion quiero un boton redondo que al hacer click  saque un menu desplegable, justo encima del boton, con varias opciones.
+El boton en lugar de texto en su interior, tendra una imagen
